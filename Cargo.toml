@@ -2,8 +2,12 @@
 name = "argocd-webhook-trigger"
 version = "0.1.0"
 edition = "2024"
+authors = ["Erlend Tobiassen <erlend.tobiassen@gmail.com>"]
+description = "Triggers ArgoCD to refresh apps given the commit pointed to by HEAD in the cwd git repo"
+repository = "https://github.com/regiontog/argocd-webhook-trigger"
+license = "MIT OR Apache-2.0"
 
 [dependencies]
-ureq = { version = "3.0.8", features = ["json"] }
-git2 = "0.20.0"
+ureq = { version = "3.0.8", features = ["json", "rustls"] }
+git2 = { version = "0.20.0", features = [], default-features = false }
 serde = { version = "1.0.218", features = ["serde_derive"] }
