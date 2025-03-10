@@ -4,4 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+ureq = { version = "3.0.8", features = ["json"] }
 git2 = "0.20.0"
+serde = { version = "1.0.218", features = ["serde_derive"] }
